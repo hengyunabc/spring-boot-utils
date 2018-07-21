@@ -9,8 +9,35 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
+	<name>${project.artifactId}}</name>
+	<description>spring-boot-utils</description>
+	<url>https://github.com/hengyunabc/spring-boot-utils</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>hengyunabc</name>
+			<email>hengyunabc@gmail.com</email>
+			<organization>hengyunabc</organization>
+			<organizationUrl>https://github.com/hengyunabc/spring-boot-utils</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/hengyunabc/spring-boot-utils.git</connection>
+		<developerConnection>scm:git:ssh://github.com:hengyunabc/spring-boot-utils.git</developerConnection>
+		<url>http://github.com/hengyunabc/spring-boot-utils/tree/master</url>
+	</scm>
+
+
 	<properties>
-		<revision>0.0.1-SNAPSHOT</revision>
+		<revision>0.0.1</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.target>1.6</maven.compiler.target>
@@ -262,6 +289,19 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
